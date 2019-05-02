@@ -5,10 +5,14 @@ import blog from '@/components/blog'
 import services from '@/components/services'
 import contact from '@/components/contact'
 import details from '@/components/details'
+import  Signup  from  '@/components/auth/Signup.vue'
+import  Login  from  '@/components/auth/Login.vue'
 
 Vue.use(Router)
 
 export default new Router({
+  mode:  'history',
+  base:  process.env.BASE_URL,
   routes: [
     {
       path: '/',
@@ -39,6 +43,16 @@ export default new Router({
       path: '/details/:Pid',
       name: 'details',
       component: details
+    },
+    {
+    path:  '/signup',
+    name:  'signup',
+    component:  Signup
+    },
+    {
+    path:  '/login',
+    name:  'login',
+    component:  Login
     }
   ]
 })

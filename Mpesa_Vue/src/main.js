@@ -3,10 +3,13 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+//import store  from  './store'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
+
+const  accessToken  =  localStorage.getItem('access_token')
 
 /* eslint-disable no-new */
 new Vue({
@@ -17,16 +20,12 @@ new Vue({
   
 })
 
-var vm = new Vue({
-  el: '#example',
-  data: {
-    message: 'Hello'
-  },
-  computed: {
-    // a computed getter
-    reversedMessage: function () {
-      // `this` points to the vm instance
-      return this.message.split('').reverse().join('')
-    }
-  }
-})
+if (accessToken) {
+  Vue.prototype.$http.defaults.headers.common['Authorization'] =  accessToken
+}
+
+// new  Vue({
+// router,
+// store,
+// render:  h  =>  h(App)
+// }).$mount('#app')
