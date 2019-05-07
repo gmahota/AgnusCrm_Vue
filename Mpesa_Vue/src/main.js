@@ -3,13 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-//import store  from  './store'
 import axios from 'axios'
 
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
-
-const  accessToken  =  localStorage.getItem('access_token')
 
 /* eslint-disable no-new */
 new Vue({
@@ -19,13 +16,3 @@ new Vue({
   template: '<App/>'
   
 })
-
-if (accessToken) {
-  Vue.prototype.$http.defaults.headers.common['Authorization'] =  accessToken
-}
-
-// new  Vue({
-// router,
-// store,
-// render:  h  =>  h(App)
-// }).$mount('#app')
