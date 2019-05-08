@@ -102,18 +102,5 @@
 
 		
 	}
-
-	/*  axios.defaults.headers = {
-        'Content-Type': 'application/json',
-        Authorization: 'myspecialpassword'
-    }
-
-   axios.post('https://myapi.com', { data: "hello world" })
-        .then(response => {
-            console.log('Response', response.data)
-        })
-        .catch(e => {
-            console.log('Error: ', e.response.data)
-        }) */
 </script>
 
