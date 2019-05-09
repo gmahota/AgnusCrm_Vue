@@ -4,6 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
+import { createProvider } from './vue-apollo'
 
 Vue.prototype.$http = axios
 Vue.config.productionTip = false
@@ -13,6 +14,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
+  apolloProvider: createProvider(),
   template: '<App/>'
-  
 })
