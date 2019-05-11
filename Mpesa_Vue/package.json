@@ -18,7 +18,9 @@
   "dependencies": {
     "@hapi/joi": "^15.0.2",
     "ajv": "^6.9.1",
+    "dotenv-safe": "^6.1.0",
     "graphql-type-json": "^0.2.1",
+    "jsonwebtoken": "^8.5.1",
     "jws": "^3.2.2",
     "lowdb": "^1.0.0",
     "mkdirp": "^0.5.1",
