@@ -1,4 +1,4 @@
-# mpesa
+# Vue Restaurant Demo [![Heroku](https://heroku-badge.herokuapp.com/?app=vuerestaurantdemo)](https://vuerestaurantdemo.herokuapp.com)
 
 ## Project setup
 ```
